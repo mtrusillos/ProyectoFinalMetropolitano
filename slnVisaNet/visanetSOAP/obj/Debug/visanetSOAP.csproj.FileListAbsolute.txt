@@ -1,0 +1,13 @@
+C:\Users\Marco\source\repos\ProyectoFinal\slnProyectoFinal\visanetSOAP\bin\visanetSOAP.dll.config
+C:\Users\Marco\source\repos\ProyectoFinal\slnProyectoFinal\visanetSOAP\bin\visanetSOAP.dll
+C:\Users\Marco\source\repos\ProyectoFinal\slnProyectoFinal\visanetSOAP\bin\visanetSOAP.pdb
+C:\Users\Marco\source\repos\ProyectoFinal\slnProyectoFinal\visanetSOAP\obj\Debug\visanetSOAP.csprojAssemblyReference.cache
+C:\Users\Marco\source\repos\ProyectoFinal\slnProyectoFinal\visanetSOAP\obj\Debug\visanetSOAP.csproj.CoreCompileInputs.cache
+C:\Users\Marco\source\repos\ProyectoFinal\slnProyectoFinal\visanetSOAP\obj\Debug\visanetSOAP.dll
+C:\Users\Marco\source\repos\ProyectoFinal\slnProyectoFinal\visanetSOAP\obj\Debug\visanetSOAP.pdb
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\visanetSOAP\bin\visanetSOAP.dll.config
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\visanetSOAP\bin\visanetSOAP.dll
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\visanetSOAP\bin\visanetSOAP.pdb
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\visanetSOAP\obj\Debug\visanetSOAP.csproj.CoreCompileInputs.cache
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\visanetSOAP\obj\Debug\visanetSOAP.dll
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\visanetSOAP\obj\Debug\visanetSOAP.pdb

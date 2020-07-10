@@ -1,0 +1,61 @@
+﻿@model IEnumerable<prjMetropolitano.Models.TARJETA>
+
+@{
+    ViewBag.Title = "Inicio ";
+}
+
+<h2></h2>
+@if (TempData["alertMessage"] != null)
+{
+<script type="text/javascript">
+       alert("@TempData["alertMessage"]");
+</script>
+}
+<p>
+    @Html.ActionLink("Enlazar Tarjeta", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            TARJETA
+        </th>
+        <th>
+            SALDO
+        </th>
+        <th>
+            EXPIRACION
+        </th>
+        <th>
+            TIPO
+        </th>
+        <th>
+            ESTADO
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_TARJETA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SALDO_TARJETA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FE_EXP_TARJETA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TIPO_TARJETA.DESC_TIPO_TARJETA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ESTADO_TARJETA)
+            </td>
+            <td>
+                @Html.ActionLink("Recarga", "Recarga", new { id = item.COD_TARJETA.Trim() })
+            </td>
+        </tr>
+    }
+
+</table>

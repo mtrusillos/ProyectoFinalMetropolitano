@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBSuneduModelStoreContainer" CdmEntityContainer="suneduEntities">
+    <EntitySetMapping Name="CARNETs">
+      <EntityTypeMapping TypeName="DBSuneduModel.CARNET">
+        <MappingFragment StoreEntitySet="CARNET">
+          <ScalarProperty Name="COD_CARNET" ColumnName="COD_CARNET" />
+          <ScalarProperty Name="DNI_ALUMNO" ColumnName="DNI_ALUMNO" />
+          <ScalarProperty Name="UNI_ALUMNO" ColumnName="UNI_ALUMNO" />
+          <ScalarProperty Name="FECEXP_ALUMNO" ColumnName="FECEXP_ALUMNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

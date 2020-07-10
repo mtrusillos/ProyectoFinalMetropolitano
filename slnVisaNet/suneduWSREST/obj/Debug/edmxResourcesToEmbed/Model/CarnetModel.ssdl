@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSuneduModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DBSunedu.dbo.CARNET' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="CARNET">
+    <Key>
+      <PropertyRef Name="DNI_ALUMNO" />
+      <PropertyRef Name="UNI_ALUMNO" />
+      <PropertyRef Name="FECEXP_ALUMNO" />
+    </Key>
+    <Property Name="COD_CARNET" Type="nchar" MaxLength="10" />
+    <Property Name="DNI_ALUMNO" Type="nchar" MaxLength="8" Nullable="false" />
+    <Property Name="UNI_ALUMNO" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="FECEXP_ALUMNO" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBSuneduModelStoreContainer">
+    <EntitySet Name="CARNET" EntityType="Self.CARNET" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CARNET].[COD_CARNET] AS [COD_CARNET], 
+    [CARNET].[DNI_ALUMNO] AS [DNI_ALUMNO], 
+    [CARNET].[UNI_ALUMNO] AS [UNI_ALUMNO], 
+    [CARNET].[FECEXP_ALUMNO] AS [FECEXP_ALUMNO]
+    FROM [dbo].[CARNET] AS [CARNET]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

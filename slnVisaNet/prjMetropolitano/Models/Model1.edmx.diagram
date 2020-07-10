@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c6a8e636297f4cc4a7836e27b8bc6550" Name="Diagram1">
+        <EntityTypeShape EntityType="MetropolitanoModel.RECARGA" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MetropolitanoModel.sysdiagram" Width="1.5" PointX="5.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MetropolitanoModel.TARJETA" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MetropolitanoModel.TIPO_TARJETA" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MetropolitanoModel.TIPO_USUARIO" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MetropolitanoModel.USUARIO" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MetropolitanoModel.USUARIO_GENERAL" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MetropolitanoModel.USUARIO_UNIVERSITARIO" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <AssociationConnector Association="MetropolitanoModel.FK_RECARGA_TARJETA1" ManuallyRouted="false" />
+        <AssociationConnector Association="MetropolitanoModel.FK_TARJETA_TIPO_TARJETA" ManuallyRouted="false" />
+        <AssociationConnector Association="MetropolitanoModel.FK_TARJETA_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="MetropolitanoModel.FK_USUARIO_GENERAL_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="MetropolitanoModel.FK_USUARIO_UNIVERSITARIO_USUARIO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

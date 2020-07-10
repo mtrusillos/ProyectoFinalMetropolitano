@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MetropolitanoModelStoreContainer" CdmEntityContainer="MetropolitanoEntities1">
+    <EntitySetMapping Name="RECARGAs">
+      <EntityTypeMapping TypeName="MetropolitanoModel.RECARGA">
+        <MappingFragment StoreEntitySet="RECARGA">
+          <ScalarProperty Name="COD_RECARGA" ColumnName="COD_RECARGA" />
+          <ScalarProperty Name="FE_RECARGA" ColumnName="FE_RECARGA" />
+          <ScalarProperty Name="MONTO_RECARGA" ColumnName="MONTO_RECARGA" />
+          <ScalarProperty Name="COD_TARJETA_RECARGA" ColumnName="COD_TARJETA_RECARGA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MetropolitanoModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TARJETAs">
+      <EntityTypeMapping TypeName="MetropolitanoModel.TARJETA">
+        <MappingFragment StoreEntitySet="TARJETA">
+          <ScalarProperty Name="COD_TARJETA" ColumnName="COD_TARJETA" />
+          <ScalarProperty Name="ESTADO_TARJETA" ColumnName="ESTADO_TARJETA" />
+          <ScalarProperty Name="SALDO_TARJETA" ColumnName="SALDO_TARJETA" />
+          <ScalarProperty Name="FE_EXP_TARJETA" ColumnName="FE_EXP_TARJETA" />
+          <ScalarProperty Name="COD_TIPO_TARJETA" ColumnName="COD_TIPO_TARJETA" />
+          <ScalarProperty Name="COD_USUARIO_TARJETA" ColumnName="COD_USUARIO_TARJETA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_TARJETA">
+      <EntityTypeMapping TypeName="MetropolitanoModel.TIPO_TARJETA">
+        <MappingFragment StoreEntitySet="TIPO_TARJETA">
+          <ScalarProperty Name="COD_TIPO_TARJETA" ColumnName="COD_TIPO_TARJETA" />
+          <ScalarProperty Name="DESC_TIPO_TARJETA" ColumnName="DESC_TIPO_TARJETA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_USUARIO">
+      <EntityTypeMapping TypeName="MetropolitanoModel.TIPO_USUARIO">
+        <MappingFragment StoreEntitySet="TIPO_USUARIO">
+          <ScalarProperty Name="COD_TIPO_USUARIO" ColumnName="COD_TIPO_USUARIO" />
+          <ScalarProperty Name="DESC_TIPO_USUARIO" ColumnName="DESC_TIPO_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOs">
+      <EntityTypeMapping TypeName="MetropolitanoModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="COD_USUARIO" ColumnName="COD_USUARIO" />
+          <ScalarProperty Name="PASSWORD_USUARIO" ColumnName="PASSWORD_USUARIO" />
+          <ScalarProperty Name="NOMBRE_USUARIO" ColumnName="NOMBRE_USUARIO" />
+          <ScalarProperty Name="GENERO_USUARIO" ColumnName="GENERO_USUARIO" />
+          <ScalarProperty Name="TIPO_DOC_USUARIO" ColumnName="TIPO_DOC_USUARIO" />
+          <ScalarProperty Name="DIRECCION_USUARIO" ColumnName="DIRECCION_USUARIO" />
+          <ScalarProperty Name="DISTRITO_USUARIO" ColumnName="DISTRITO_USUARIO" />
+          <ScalarProperty Name="FECHA_NAC_USUARIO" ColumnName="FECHA_NAC_USUARIO" />
+          <ScalarProperty Name="CELULAR_USUARIO" ColumnName="CELULAR_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO_GENERAL">
+      <EntityTypeMapping TypeName="MetropolitanoModel.USUARIO_GENERAL">
+        <MappingFragment StoreEntitySet="USUARIO_GENERAL">
+          <ScalarProperty Name="COD_USUARIO_GENERAL" ColumnName="COD_USUARIO_GENERAL" />
+          <ScalarProperty Name="COD_USUARIO_PADRE" ColumnName="COD_USUARIO_PADRE" />
+          <ScalarProperty Name="COD_TIPO_USUARIO_GENERAL" ColumnName="COD_TIPO_USUARIO_GENERAL" />
+          <ScalarProperty Name="DESC_TIPO_USUARIO_GENERAL" ColumnName="DESC_TIPO_USUARIO_GENERAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO_UNIVERSITARIO">
+      <EntityTypeMapping TypeName="MetropolitanoModel.USUARIO_UNIVERSITARIO">
+        <MappingFragment StoreEntitySet="USUARIO_UNIVERSITARIO">
+          <ScalarProperty Name="COD_USUARIO_UNIVERSITARIO" ColumnName="COD_USUARIO_UNIVERSITARIO" />
+          <ScalarProperty Name="COD_USUARIO_PADRE" ColumnName="COD_USUARIO_PADRE" />
+          <ScalarProperty Name="COD_TIPO_USUARIO_UNIVERISTARIO" ColumnName="COD_TIPO_USUARIO_UNIVERISTARIO" />
+          <ScalarProperty Name="DESC_TIPO_USUARIO_UNIVERISTARIO" ColumnName="DESC_TIPO_USUARIO_UNIVERISTARIO" />
+          <ScalarProperty Name="ESTADO_UNIVERSITARIO" ColumnName="ESTADO_UNIVERSITARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

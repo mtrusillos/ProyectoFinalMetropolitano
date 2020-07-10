@@ -1,0 +1,58 @@
+﻿@model prjMetropolitano.Models.TARJETA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TARJETA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO_TARJETA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO_TARJETA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SALDO_TARJETA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SALDO_TARJETA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FE_EXP_TARJETA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FE_EXP_TARJETA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_TARJETA.DESC_TIPO_TARJETA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_TARJETA.DESC_TIPO_TARJETA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIO.PASSWORD_USUARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIO.PASSWORD_USUARIO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COD_TARJETA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

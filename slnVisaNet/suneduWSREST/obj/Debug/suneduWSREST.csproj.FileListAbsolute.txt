@@ -1,0 +1,11 @@
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\suneduWSREST\bin\suneduWSREST.dll.config
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\suneduWSREST\bin\suneduWSREST.dll
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\suneduWSREST\bin\suneduWSREST.pdb
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\suneduWSREST\bin\EntityFramework.dll
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\suneduWSREST\bin\EntityFramework.SqlServer.dll
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\suneduWSREST\bin\EntityFramework.xml
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\suneduWSREST\bin\EntityFramework.SqlServer.xml
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\suneduWSREST\obj\Debug\suneduWSREST.csproj.CoreCompileInputs.cache
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\suneduWSREST\obj\Debug\suneduWSREST.csproj.CopyComplete
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\suneduWSREST\obj\Debug\suneduWSREST.dll
+C:\Users\Marco\source\repos\ProyectoFinal\slnVisaNet\suneduWSREST\obj\Debug\suneduWSREST.pdb

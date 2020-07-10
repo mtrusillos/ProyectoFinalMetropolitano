@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MetropolitanoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="RECARGA">
+    <Key>
+      <PropertyRef Name="COD_RECARGA" />
+    </Key>
+    <Property Name="COD_RECARGA" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="FE_RECARGA" Type="date" Nullable="false" />
+    <Property Name="MONTO_RECARGA" Type="decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="COD_TARJETA_RECARGA" Type="char" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TARJETA">
+    <Key>
+      <PropertyRef Name="COD_TARJETA" />
+    </Key>
+    <Property Name="COD_TARJETA" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="ESTADO_TARJETA" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="SALDO_TARJETA" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="FE_EXP_TARJETA" Type="date" />
+    <Property Name="COD_TIPO_TARJETA" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="COD_USUARIO_TARJETA" Type="char" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="TIPO_TARJETA">
+    <Key>
+      <PropertyRef Name="COD_TIPO_TARJETA" />
+    </Key>
+    <Property Name="COD_TIPO_TARJETA" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="DESC_TIPO_TARJETA" Type="char" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="COD_USUARIO" />
+    </Key>
+    <Property Name="COD_USUARIO" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="PASSWORD_USUARIO" Type="varchar(max)" Nullable="false" />
+    <Property Name="NOMBRE_USUARIO" Type="varchar(max)" Nullable="false" />
+    <Property Name="GENERO_USUARIO" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="TIPO_DOC_USUARIO" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="DIRECCION_USUARIO" Type="varchar(max)" Nullable="false" />
+    <Property Name="DISTRITO_USUARIO" Type="varchar(max)" Nullable="false" />
+    <Property Name="FECHA_NAC_USUARIO" Type="date" Nullable="false" />
+    <Property Name="CELULAR_USUARIO" Type="char" MaxLength="9" />
+  </EntityType>
+  <EntityType Name="USUARIO_GENERAL">
+    <Key>
+      <PropertyRef Name="COD_USUARIO_GENERAL" />
+    </Key>
+    <Property Name="COD_USUARIO_GENERAL" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="COD_USUARIO_PADRE" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="COD_TIPO_USUARIO_GENERAL" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="DESC_TIPO_USUARIO_GENERAL" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIO_UNIVERSITARIO">
+    <Key>
+      <PropertyRef Name="COD_USUARIO_UNIVERSITARIO" />
+    </Key>
+    <Property Name="COD_USUARIO_UNIVERSITARIO" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="COD_USUARIO_PADRE" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="COD_TIPO_USUARIO_UNIVERISTARIO" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="DESC_TIPO_USUARIO_UNIVERISTARIO" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="ESTADO_UNIVERSITARIO" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK_RECARGA_TARJETA1">
+    <End Role="TARJETA" Type="Self.TARJETA" Multiplicity="1" />
+    <End Role="RECARGA" Type="Self.RECARGA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TARJETA">
+        <PropertyRef Name="COD_TARJETA" />
+      </Principal>
+      <Dependent Role="RECARGA">
+        <PropertyRef Name="COD_TARJETA_RECARGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TARJETA_TIPO_TARJETA">
+    <End Role="TIPO_TARJETA" Type="Self.TIPO_TARJETA" Multiplicity="1" />
+    <End Role="TARJETA" Type="Self.TARJETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_TARJETA">
+        <PropertyRef Name="COD_TIPO_TARJETA" />
+      </Principal>
+      <Dependent Role="TARJETA">
+        <PropertyRef Name="COD_TIPO_TARJETA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TARJETA_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="TARJETA" Type="Self.TARJETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="COD_USUARIO" />
+      </Principal>
+      <Dependent Role="TARJETA">
+        <PropertyRef Name="COD_USUARIO_TARJETA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_GENERAL_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+    <End Role="USUARIO_GENERAL" Type="Self.USUARIO_GENERAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="COD_USUARIO" />
+      </Principal>
+      <Dependent Role="USUARIO_GENERAL">
+        <PropertyRef Name="COD_USUARIO_PADRE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_UNIVERSITARIO_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+    <End Role="USUARIO_UNIVERSITARIO" Type="Self.USUARIO_UNIVERSITARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="COD_USUARIO" />
+      </Principal>
+      <Dependent Role="USUARIO_UNIVERSITARIO">
+        <PropertyRef Name="COD_USUARIO_PADRE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MetropolitanoModelStoreContainer">
+    <EntitySet Name="RECARGA" EntityType="Self.RECARGA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TARJETA" EntityType="Self.TARJETA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_TARJETA" EntityType="Self.TIPO_TARJETA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO_GENERAL" EntityType="Self.USUARIO_GENERAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO_UNIVERSITARIO" EntityType="Self.USUARIO_UNIVERSITARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_RECARGA_TARJETA1" Association="Self.FK_RECARGA_TARJETA1">
+      <End Role="TARJETA" EntitySet="TARJETA" />
+      <End Role="RECARGA" EntitySet="RECARGA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TARJETA_TIPO_TARJETA" Association="Self.FK_TARJETA_TIPO_TARJETA">
+      <End Role="TIPO_TARJETA" EntitySet="TIPO_TARJETA" />
+      <End Role="TARJETA" EntitySet="TARJETA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TARJETA_USUARIO" Association="Self.FK_TARJETA_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="TARJETA" EntitySet="TARJETA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_GENERAL_USUARIO" Association="Self.FK_USUARIO_GENERAL_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="USUARIO_GENERAL" EntitySet="USUARIO_GENERAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_UNIVERSITARIO_USUARIO" Association="Self.FK_USUARIO_UNIVERSITARIO_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="USUARIO_UNIVERSITARIO" EntitySet="USUARIO_UNIVERSITARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

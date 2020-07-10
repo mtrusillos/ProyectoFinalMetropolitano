@@ -1,0 +1,46 @@
+﻿@model IEnumerable<prjMetropolitano.Models.TARJETA>
+
+@{
+    ViewBag.Title = "Renovacion universitaria ";
+}
+
+<h2></h2>
+@if (TempData["alertMessage"] != null)
+{
+    <script type="text/javascript">
+       alert("@TempData["alertMessage"]");
+    </script>
+}
+<table class="table">
+    <tr>
+        <th>
+            TARJETA
+        </th>
+        <th>
+            EXPIRACION
+        </th>
+        <th>
+            TIPO
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_TARJETA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FE_EXP_TARJETA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TIPO_TARJETA.DESC_TIPO_TARJETA)
+            </td>
+            <td>
+                @Html.ActionLink("Editar vigencia", "Renovar", new { id = item.COD_TARJETA.Trim() })
+            </td>
+        </tr>
+    }
+
+</table>
